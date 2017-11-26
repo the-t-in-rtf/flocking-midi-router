@@ -8,9 +8,11 @@
 
 "use strict";
 
-var fluid = require("infusion");
+var fluid = fluid || require("infusion");
 
-fluid.require("flocking");
+if (typeof require !== "undefined") {
+    fluid.require("flocking");
+}
 
 fluid.defaults("flock.midi.router", {
     gradeNames: "fluid.component",

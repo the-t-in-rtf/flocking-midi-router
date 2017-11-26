@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>MIDI router web demo.</title>
+    
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+
+    <script src="../node_modules/infusion/src/framework/core/js/Fluid.js"></script>
+    <script src="../node_modules/infusion/src/framework/core/js/FluidDebugging.js"></script>
+    <script src="../node_modules/infusion/src/framework/core/js/FluidIoC.js"></script>
+    <script src="../node_modules/infusion/src/framework/core/js/DataBinding.js"></script>
+    <script src="../node_modules/infusion/src/framework/core/js/ModelTransformation.js"></script>
+    <script src="../node_modules/infusion/src/framework/core/js/ModelTransformationTransforms.js"></script>
+    <script src="../node_modules/infusion/src/framework/enhancement/js/ContextAwareness.js"></script>
+    <script src="../node_modules/infusion/src/framework/core/js/FluidDocument.js"></script>
+    <script src="../node_modules/infusion/src/framework/core/js/FluidDOMUtilities.js"></script>
+    <script src="../node_modules/infusion/src/framework/core/js/FluidView.js"></script>
+
+    <script src="../node_modules/flocking/third-party/webarraymath/js/webarraymath.js"></script>
+    <script src="../node_modules/flocking/third-party/simjs/js/random-0.26.js"></script>
+
+    <script src="../node_modules/flocking/src/core.js"></script>
+    <script src="../node_modules/flocking/src/node-list.js"></script>
+    <script src="../node_modules/flocking/src/evaluators.js"></script>
+    <script src="../node_modules/flocking/src/synths/model.js"></script>
+    <script src="../node_modules/flocking/src/synths/group.js"></script>
+    <script src="../node_modules/flocking/src/synths/polyphonic.js"></script>
+    <script src="../node_modules/flocking/src/buffers.js"></script>
+    <script src="../node_modules/flocking/src/audiofile.js"></script>
+    <script src="../node_modules/flocking/src/audiofile-encoder.js"></script>
+    <script src="../node_modules/flocking/src/scheduler.js"></script>
+    <script src="../node_modules/flocking/src/web/webaudio-core.js"></script>
+    <script src="../node_modules/flocking/src/web/audio-system.js"></script>
+    <script src="../node_modules/flocking/src/web/buffer-writer.js"></script>
+    <script src="../node_modules/flocking/src/web/input-device-manager.js"></script>
+    <script src="../node_modules/flocking/src/web/midi.js"></script>
+    <script src="../node_modules/flocking/src/midi/controller.js"></script>
+    <script src="../node_modules/flocking/src/web/native-node-manager.js"></script>
+    <script src="../node_modules/flocking/src/web/output-manager.js"></script>
+    <script src="../node_modules/flocking/src/parser.js"></script>
+
+    <script src="../node_modules/flocking/src/ugens/core.js"></script>
+    <script src="../node_modules/flocking/src/ugens/bandlimited.js"></script>
+    <script src="../node_modules/flocking/src/ugens/envelopes.js"></script>
+    <script src="../node_modules/flocking/src/ugens/midi.js"></script>
+
+    <script src="../node_modules/flocking/src/ui/selectbox/js/selectbox.js"></script>
+    <script src="../node_modules/flocking/src/ui/midi/midi-port-selector/js/midi-port-selector.js"></script>
+    <script src="../node_modules/flocking/src/ui/midi/midi-connector/js/midi-connector.js"></script>    
+
+    <script src="../src/midi-router.js"></script>
+    <script type="text/javascript" src="../src/ui/browser-router.js"></script>
+</head>
+<body>
+
+<table>
+    <tbody>
+        <tr>
+            <th>Input</th>
+            <td>
+                <!-- Markup for input selector -->
+                <div id="midiInputSelector"></div>
+            </td>
+        </tr>
+        <tr>
+            <th>Output</th>
+            <td>
+                <!-- Markup for output selector -->
+                <div id="midiOutputSelector"></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- TODO: instantiate our component -->
+<script type="text/javascript">
+    fluid.setLogging(true);
+    window.flockingMidiRouter = flock.midi.router.browser("body");
+</script>
+</body>
+</html>
