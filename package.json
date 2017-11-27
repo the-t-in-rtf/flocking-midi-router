@@ -33,7 +33,7 @@
     "grunt-jsonlint": "1.1.0"
   },
   "dependencies": {
-    "flocking": "git://github.com/the-t-in-rtf/Flocking.git#fd0837542dcf6e724d19052f63d7da0a4cb3e89d",
+    "flocking": "git://github.com/the-t-in-rtf/Flocking.git#5a7cae8c95946e3f4bb7d97e2d9d9832287ffa3c",
     "gpii-launcher": "1.0.0-dev.20170207T102054Z.3d7b546",
     "infusion": "2.0.0",
     "minimist": "1.2.0"
